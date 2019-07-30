@@ -1,0 +1,512 @@
+ul {
+    position: absolute;
+    right: 40px;
+    font-size: 20px;
+    top: 2%;
+}
+
+.m {
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+.baslik {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+.resim {
+    position: absolute;
+    left: 47%;
+    top: 10px;
+    z-index: 1;
+    width: 100px;
+}
+
+.arkaplan {
+    background-color: whitesmoke;
+    position: relative;
+    height: 100%;
+    margin: 1% 5% 5% 5%;
+    font-size: 62.5%;
+}
+
+.info {
+    background-color: #F5E9E6;
+    top: 10%;
+    left: 3%;
+    right: 3%;
+    text-align: center;
+    position: relative;
+    height: 260px;
+    width: 90%;
+    padding-left: 1%;
+}
+
+.resimler {
+    left: 1px;
+    width: 200px;
+    float: left;
+}
+
+    .resimler img {
+        width: 200px;
+        height: 200px;
+    }
+
+.bilgi {
+    float: left;
+    position: relative;
+    left: 15%;
+}
+
+    .bilgi div {
+        text-align: center;
+    }
+
+    .bilgi #little {
+        display: none;
+    }
+
+    .bilgi #medium {
+        display: none;
+    }
+
+    .bilgi .baslik {
+        margin-left: 2%;
+    }
+
+.parxlab {
+    left: 5%;
+}
+
+.fabb {
+    padding: 8px;
+    font-size: 15px;
+    width: 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    position: relative;
+}
+
+.fab:hover {
+    opacity: 0.6;
+}
+
+.fa-facebook-f {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+footer {
+    position: relative;
+    top: 100px;
+    background-color: dimgray;
+}
+
+@media screen and (max-width:1400px) {
+
+    .bilgi div {
+        font-size: 15px;
+    }
+
+        .bilgi div a {
+            font-size: 15px;
+        }
+}
+
+@media screen and (max-width:1144px) {
+
+    .bilgi #big {
+        display: none;
+    }
+
+    .bilgi #little {
+        display: none;
+    }
+
+    .bilgi #medium {
+        display: initial;
+    }
+
+    .resim {
+        display: none;
+    }
+
+    .bilgi div {
+        font-size: 15px;
+    }
+
+        .bilgi div a {
+            font-size: 15px;
+        }
+}
+
+@media screen and (max-width:830px) {
+
+    .bilgi #big {
+        display: none;
+    }
+
+    .bilgi #little {
+        display: none;
+    }
+
+    .bilgi #medium {
+        display: none;
+    }
+
+    .bilgi #little {
+        display: initial;
+    }
+
+    .resim {
+        display: none;
+    }
+
+    .bilgi .baslik {
+        font-size: 15px;
+    }
+
+    .bilgi div {
+        font-size: 12px;
+    }
+
+        .bilgi div a {
+            font-size: 12px;
+        }
+
+    .bilgi {
+        left: 10%;
+    }
+
+    .parxlab {
+        left: 5%;
+    }
+}
+
+@media screen and (max-width:640px) {
+
+    .baslik {
+        font-size: 15px;
+    }
+
+    .bilgi #big {
+        display: none;
+    }
+
+    .bilgi #medium {
+        display: none;
+    }
+
+    .bilgi #little {
+        display: initial;
+    }
+
+    .resim {
+        display: none;
+    }
+
+    .bilgi .baslik {
+        font-size: 10px;
+    }
+
+    .bilgi div {
+        font-size: 8px;
+    }
+
+        .bilgi div a {
+            font-size: 8px;
+        }
+}
+
+@media screen and (max-width:576px) {
+
+
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 12px;
+    }
+
+    .menu {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        background-color: whitesmoke;
+        width: 100%;
+        text-align: center;
+    }
+
+    .rounded {
+        height: 400px;
+    }
+
+    .resimler {
+        width: 100%;
+        height: 150px;
+        left: 4px;
+        float: none;
+    }
+
+        .resimler img {
+            width: 100%;
+            height: 150px;
+            left: 4px;
+        }
+
+    .bilgi {
+        left: 0px;
+        float: none;
+    }
+
+        .bilgi #medium {
+            display: none;
+        }
+
+        .bilgi #big {
+            display: none;
+        }
+
+        .bilgi .parxlab {
+        }
+
+
+        .bilgi #little {
+            display: inline;
+        }
+
+        .bilgi div {
+            width: 100%;
+            font-size: 15px;
+        }
+
+       .bilgi div a {
+         font-size: 16px;
+        }
+
+        .bilgi .parxlab {
+            font-size: 12px;
+        }
+
+            .bilgi .parxlab a {
+                font-size: 12px;
+            }
+
+        .bilgi .baslik {
+            font-size: 20px;
+            text-align: center;
+        }
+
+    .arkaplan {
+        height: auto;
+    }
+
+    footer {
+        top: auto;
+    }
+}
+
+@media screen and (max-width:434px) {
+
+
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 10px;
+    }
+
+    .menu {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        background-color: whitesmoke;
+        width: 100%;
+        text-align: center;
+    }
+
+    .rounded {
+        height: 400px;
+    }
+
+    .resimler {
+        width: 100%;
+        height: 150px;
+        left: 4px;
+        float: none;
+    }
+
+        .resimler img {
+            width: 100%;
+            height: 150px;
+            left: 4px;
+        }
+
+    .bilgi {
+        left: 0px;
+        float: none;
+    }
+
+        .bilgi #medium {
+            display: none;
+        }
+
+        .bilgi #big {
+            display: none;
+        }
+
+        .bilgi .parxlab {
+        }
+
+
+        .bilgi #little {
+            display: inline;
+        }
+
+        .bilgi div {
+            width: 100%;
+            font-size: 10px;
+        }
+     
+       .bilgi div a {
+                font-size: 12px;
+        }
+
+        .bilgi .parxlab {
+            font-size: 5px;
+        }
+
+            .bilgi .parxlab a {
+                font-size: 8px;
+            }
+
+        .bilgi .baslik {
+            font-size: 12px;
+            text-align: center;
+        }
+
+    .arkaplan {
+        height: auto;
+    }
+
+    footer {
+        top: auto;
+    }
+}
+
+@media screen and (max-width:334px) {
+
+
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 7px;
+    }
+
+    .menu {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        background-color: whitesmoke;
+        width: 100%;
+        text-align: center;
+    }
+
+    .rounded {
+        height: 400px;
+    }
+
+    .resimler {
+        width: 100%;
+        height: 150px;
+        left: 4px;
+        float: none;
+    }
+
+        .resimler img {
+            width: 100%;
+            height: 150px;
+            left: 4px;
+        }
+
+    .bilgi {
+        left: 0px;
+        float: none;
+    }
+
+        .bilgi #medium {
+            display: none;
+        }
+
+        .bilgi #big {
+            display: none;
+        }
+
+        .bilgi .parxlab {
+        }
+
+
+        .bilgi #little {
+            display: inline;
+        }
+
+        .bilgi div {
+            width: 100%;
+            font-size: 7px;
+        }
+
+            .bilgi div a {
+                font-size: 8px;
+            }
+
+        .bilgi .parxlab {
+            font-size: 3px;
+        }
+
+            .bilgi .parxlab a {
+                font-size: 5px;
+            }
+
+        .bilgi .baslik {
+            font-size: 8px;
+            text-align: center;
+        }
+
+    .arkaplan {
+        height: auto;
+    }
+
+    footer {
+        top: auto;
+    }
+}

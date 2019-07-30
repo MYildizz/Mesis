@@ -1,0 +1,798 @@
+﻿@using mesis.Models;
+@model Veriler
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>MESİS - Merkezi Sensör İzleme Sistemi</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="title" content=" MESİS - Merkezi Sensör İzleme Sistemi " />
+    <meta name="keywords" content="mesis,MESİS,merkezi sensör izleme sistemi,sensör,akıllı şehirler,uzaktan yönetim,ısı,sıcaklık,nem,elektronik,parxlab" />
+    <meta name="description" content="Merkezi Sensör İzleme Sistemi altyapı gözetimi için ısı,sıcaklık,ses gibi,açıklık kapalılık gibi değerleri uzaktan kontrol imkanını sağlar" />
+    <Meta Name=”Robots” Content="INDEX,FOLLOW">
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/index.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+    <h1 id="motorBasligi" style="display:none;"> MESİS/ Merkezi Sensör İzleme Sistemi  </h1>
+    <!-- Navbar Kısmı-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="">
+
+        <img src="/img/logo.png" width="50" height="50" alt="" />
+        &emsp;
+        <a class="navbar-brand baslik" href="/">    MESİS/ Merkezi Sensör İzleme Sistemi</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto nav-link menu">
+
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">Anasayfa<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Home/hakkimizda">Hakkımızda<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/projemiz">Projemiz</a>
+                </li>
+
+                <li class="nav-item my-2 my-lg-0">
+                    <a class="nav-link " href="/Home/iletisim" tabindex="-1" aria-disabled="true">İletişim</a>
+                </li>
+            </ul>
+
+        </div>
+
+
+    </nav>
+
+
+    <!-- Slider Kısmı-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 " src="/img/1.jpg" alt="First slide" height="400">
+
+
+                <div class="carousel-caption d-none d-md-block ">
+                    &emsp;
+                    <h5 class="slides">Dijital Çözümlerle Şehirleri Akıllaştırıyoruz  </h5>
+
+                </div>
+
+
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/img/4.jpeg" alt="Second slide " height="400">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="slides"> Çağa Ayak Uydurmak ve verimlilik için IOT  </h5>
+                </div>
+
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/img/5.jpeg" alt="Third slide" height="400">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="slides"> Genç ve dinamik ekibimizle Akıllı Şehirler için projeler gelişiriyoruz</h5>
+
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <!-- Logo-->
+    <div class="resim" align="center"> <img src="/img/m.png" width="100" height="100" alt="" /> </div>
+
+
+    <!--Cihaz Yönetimi ve Butonlar-->
+
+    <div class="alert alert-secondary" role="alert" style="height:60px;">
+
+        <div class="Cihaz">
+            <h3 class="navbar-brand baslik durum"> CİHAZ DURUMU </h3>
+        </div>
+
+
+        <div class="buttons">
+            <button type="button" id="gunlukB" class="btn btn-outline-primary"> Günlük Kayıt </button>
+            <button type="button" id="haftalikB" class="btn btn-outline-secondary">  Haftalık Kayıt  </button>
+            <button type="button" id="aylikB" class="btn btn-outline-success"> Aylık Kayıt </button>
+            <button type="button" id="yillikB" class="btn btn-outline-danger">  Yıllık Kayıt  </button>
+        </div>
+
+
+
+
+    </div>
+
+
+    <!--Durum ve tablo -->
+
+    <div>
+
+        <!-- Cihaz Durumu-->
+        <div class="CihazDurumu">
+
+            <div id="CihazBaglanti" style="text-align:center; bottom:10px; vertical-align: middle; position:relative; top:30px;height:55px;">  </div>
+            <div id="time" style="text-align:center;position:relative;top:0px;height:10px;font-size:24px;"></div>
+
+
+        </div>
+
+        <!--tablo-->
+
+        <div class="my-custom-scrollbar my-custom-scrollbar-primary">
+
+            <div class="tablolar">
+                <div id="gunluk">
+                    <table class="table text-muted p-3 mb-2 bg-light text-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Cihaz No</th>
+                                <th scope="col">Sicaklik-Nem</th>
+                                <th scope="col">Açıklık Süresi</th>
+                                <th scope="col">Tarih - Saat</th>
+                            </tr>
+
+                            @foreach (var item in Model.gunluk)
+                            {
+
+                                <tr id="verilerT">
+                                    <th id="idT" scope="row">@item.cihazNo</th>
+                                    <td id="durumT">@item.durum</td>
+                                    <td id="sureT">@item.sure</td>
+                                    <td id="tarihT">@item.tarih</td>
+                                </tr>
+
+                            }
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div id="haftalik">
+                    <table class="table text-muted p-3 mb-2 bg-light text-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Cihaz No</th>
+                                <th scope="col">Sicaklik-Nem</th>
+                                <th scope="col">Süre</th>
+                                <th scope="col">Tarih - Saat</th>
+                            </tr>
+
+                            @foreach (var item in Model.haftalik)
+                            {
+
+                                <tr id="verilerT">
+                                    <th id="idT" scope="row">@item.cihazNo</th>
+                                    <td id="durumT">@item.durum</td>
+                                    <td id="sureT">@item.sure</td>
+                                    <td id="tarihT">@item.tarih</td>
+                                </tr>
+
+                            }
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div id="aylik">
+                    <table class="table text-muted p-3 mb-2 bg-light text-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Cihaz No</th>
+                                <th scope="col">Sicaklik-Nem</th>
+                                <th scope="col">Açıklık Süresi</th>
+                                <th scope="col">Tarih - Saat</th>
+                            </tr>
+
+                            @foreach (var item in Model.aylik)
+                            {
+
+                                <tr id="verilerT">
+                                    <th id="idT" scope="row">@item.cihazNo</th>
+                                    <td id="durumT">@item.durum</td>
+                                    <td id="sureT">@item.sure</td>
+                                    <td id="tarihT">@item.tarih</td>
+                                </tr>
+
+                            }
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div id="yillik">
+                    <table class="table text-muted p-3 mb-2 bg-light text-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Cihaz No</th>
+                                <th scope="col">Durum</th>
+                                <th scope="col">Açıklık Süresi</th>
+                                <th scope="col">Tarih - Saat</th>
+                            </tr>
+
+                            @foreach (var item in Model.yillik)
+                            {
+
+                                <tr id="verilerT">
+                                    <th id="idT" scope="row">@item.cihazNo</th>
+                                    <td id="durumT">@item.durum</td>
+                                    <td id="sureT">@item.sure</td>
+                                    <td id="tarihT">@item.tarih</td>
+                                </tr>
+
+                            }
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Nem ve Sırcaklık Yazıları-->
+    <div class="alert alert-secondary" role="alert" style="height:60px; top:40px; position:relative;">
+
+        <a class="baslik barMenu1">SICAKLIK </a>
+        <a class="baslik barMenu2"> NEM </a>
+
+    </div>
+
+
+    <!-- Cihaz İstatistği -->
+
+    <div class="istatistikDiv">
+
+        <!-- sıcaklık -->
+        <div id="myfirstchart" class="istatistik" style="height: 250px;"></div>
+        <!-- Nem -->
+        <div id="mysecondchart" class="istatistik" style="height: 250px; "></div>
+
+    </div>
+
+
+
+    <!-- Footer -->
+
+    <footer class="page-footer font-small indigo">
+
+        <!-- Footer Links -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="/Home/hakkimizda">Hakkımızda</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="/Home/projemiz">Ürünümüz</a>
+                    </h6>
+                </div>
+
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="/Home/iletisim">Yardım</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-2 mb-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="/Home/iletisim">iletişim</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+            <hr class="rgba-white-light" style="margin: 0 15%;">
+
+            <!-- Grid row-->
+            <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+                <!-- Grid column -->
+                <div class="col-md-8 col-12 mt-5">
+                    <p style="line-height: 1.7rem">
+                        Günümüzde teknolojinin gelişmesiyle  biz de şehirleri dijitalleştirmek
+                        ve Akıllı Şehirler oluşturmak için çalışıyoruz.
+                        Geliştirdiğimiz Merkezi Sensör İzleme Sistemi ile birlikte birçok alanda altyapı gözetimi için
+                        ısı,sıcaklık,ses gibi,açıklık kapalılık,cihaz yerinde var ya da yok gibi değerleri
+                        sensörlerimizle ölçüyor ve bütün değerleri tek bir noktada toplayıp uzak mesafelerden
+                        Web ve Android platformları ile uzaktan yönetim imkanı sağlıyoruz.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+
+
+            </div>
+            <!-- Grid row-->
+            <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+            <!-- Grid row-->
+            <div class="row pb-3">
+
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-12" style="text-align:center;position:relative;">
+
+                    <a href="https://www.facebook.com/parxlab/" class="fab fabb fa-facebook-f"></a>
+                    <a href="https://twitter.com/PARXLAB" class="fab fabb fa-twitter"></a>
+                    <a href="https://www.linkedin.com/company/parxlab/" class="fab fabb fa-linkedin"></a>
+                    <a href="https://www.instagram.com/parxlab/" class="fab fabb fa-instagram"></a>
+
+                </div>
+            </div>
+            <!-- Grid row-->
+
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+
+            <a href="https://www.parxlab.co/"> www.parxlab.co </a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
+
+
+
+
+    <!--İstatistik Scripti -->
+    <script>
+        var cihaz;
+        var SicaklikDeger = new Array();
+        var SicaklikZaman = new Array();
+        var NemZaman = new Array();
+        var NemDeger = new Array();
+
+
+        // Jsondan sıcaklık verileri alınıyor
+        var site1 = "https://api.asksensors.com/read/Y4tLWrhgwCtpIgHHQvsJgT9cIebkCBhb?module=module1&10=number_of_entiries";
+
+        $(document).ready(function () {
+            $.getJSON(site1).done(function (veri) {
+
+                var i;
+                for (i = 0; i < 8; i++) {
+                    SicaklikDeger[i] = veri[i].value;
+                    temp = veri[i].date;
+                    SicaklikZaman[i] = temp.slice(11, 16);
+
+                }
+
+                //Sıcaklık Grafiği
+                new Morris.Line({
+                    element: 'myfirstchart',
+                    data: [
+
+                        { year: SicaklikZaman[7], value: SicaklikDeger[7] },
+                        { year: SicaklikZaman[6], value: SicaklikDeger[6] },
+                        { year: SicaklikZaman[5], value: SicaklikDeger[5] },
+                        { year: SicaklikZaman[4], value: SicaklikDeger[4] },
+                        { year: SicaklikZaman[3], value: SicaklikDeger[3] },
+                        { year: SicaklikZaman[2], value: SicaklikDeger[2] },
+                        { year: SicaklikZaman[1], value: SicaklikDeger[1] },
+                        { year: SicaklikZaman[0], value: SicaklikDeger[0] },
+                    ],
+                    xkey: 'year',
+                    parseTime: false,
+                    ykeys: ['value'],
+                    labels: ['Value']
+                });
+            })
+        })
+
+        function SicaklikAl() {
+
+            $(document).ready(function () {
+                $.getJSON(site1).done(function (veri) {
+
+                    var i;
+                    for (i = 0; i < 5; i++) {
+                        SicaklikDeger[i] = veri[i].value;
+                        temp = veri[i].date;
+                        SicaklikZaman[i] = temp.slice(11, 16);
+
+                    }
+
+                })
+            })
+
+
+        }
+
+        // SicaklikAl();
+        window.setInterval(SicaklikAl, 5000);
+
+
+        //Nem Alma İşlemleri
+
+        var site2 = "https://api.asksensors.com/read/Y4tLWrhgwCtpIgHHQvsJgT9cIebkCBhb?module=module2&10=number_of_entiries";
+
+        //Jsondan veri alınıyor
+        $(document).ready(function () {
+            $.getJSON(site2).done(function (veri) {
+
+                var i;
+                for (i = 0; i < 8; i++) {
+                    NemDeger[i] = veri[i].value;
+                    temp = veri[i].date;
+                    NemZaman[i] = temp.slice(11, 16);
+
+                }
+                //Nem Grafiği
+                new Morris.Line({
+                    element: 'mysecondchart',
+
+                    data: [
+
+                        { year: NemZaman[7], value: NemDeger[4] },
+                        { year: NemZaman[6], value: NemDeger[4] },
+                        { year: NemZaman[5], value: NemDeger[4] },
+                        { year: NemZaman[4], value: NemDeger[4] },
+                        { year: NemZaman[3], value: NemDeger[3] },
+                        { year: NemZaman[2], value: NemDeger[2] },
+                        { year: NemZaman[1], value: NemDeger[1] },
+                        { year: NemZaman[0], value: NemDeger[0] },
+                    ],
+                    xkey: 'year',
+                    parseTime: false,
+                    ykeys: ['value'],
+                    labels: ['Value']
+                });
+            })
+        })
+
+        function NemAl() {
+
+            $(document).ready(function () {
+                $.getJSON(site2).done(function (veri) {
+
+                    var i;
+                    for (i = 0; i < 5; i++) {
+                        NemDeger[i] = veri[i].value;
+                        temp = veri[i].date;
+                        NemZaman[i] = temp.slice(11, 16);
+
+                    }
+                })
+            })
+        }
+        NemAl();
+        window.setInterval(NemAl, 1000);
+
+        // Deger Alma işlemleri
+
+        //Jsondan cihaz durumu verisi alınıyor
+        var site3 = "https://api.asksensors.com/read/Y4tLWrhgwCtpIgHHQvsJgT9cIebkCBhb?module=module3&10=number_of_entiries";
+        function degerAl() {
+
+            $(document).ready(function () {
+                $.getJSON(site3).done(function (veri) {
+                    window.kapali = veri[0].value;
+                    cihaz = veri[0].value;
+                })
+            })
+
+            //Bağlantı yoksa
+            if (cihaz == 3) {
+                $("#CihazBaglanti").text("Cihaz Bağlantısı Yok");
+                $(".CihazDurumu").css("background-color", "#57403A");
+                $("#CihazBaglanti").css("font-size", "20px");
+                $("#CihazBaglanti").css("top", "30px");
+
+                if (hours < 10 && minutes < 10)
+                    record = "0" + hours + "." + "0" + minutes + "." + second + " Dk";
+                else if (hours > 10 && minutes < 10)
+                    record = hours + "." + "0" + minutes + "." + second + " Dk";
+                else if (hours < 10 && minutes > 10)
+                    record = "0" + hours + "." + minutes + "." + second + " Dk"
+                else
+                    recod = hours + "." + minutes + "." + second + " Dk"
+
+                date = d.getDate() + " " + d.getMonth() + " " + d.getFullYear();
+            }
+
+            //Cihaz kapalıysa
+            else if (cihaz == 0) {
+
+               // $(".CihazDurumu").animate({ background-color:"#6286a0"},'slow');
+
+                $("#CihazBaglanti").text("Cihaz Kapalı");
+               $(".CihazDurumu").css("background-color", "#6286a0");
+                $("#CihazBaglanti").css("font-size", "20px");
+                $("#CihazBaglanti").css("top", "30px");
+
+                if (hours < 10 && minutes < 10)
+                    record = "0" + hours + "." + "0" + minutes + "." + second + " Dk";
+                else if (hours >= 10 && minutes < 10)
+                    record = hours + "." + "0" + minutes + "." + second + " Dk";
+                else if (hours < 10 && minutes > 10)
+                    record = "0" + hours + "." + minutes + "." + second + " Dk"
+                else
+                    record = hours + "." + minutes + "." + second + " Dk"
+
+                if ( second >= 10) {
+
+                   //  $(".CihazDurumu").fadeTo("slow", 1);
+
+                    var SicaklikNem = "" + SicaklikDeger[0] + "°C  -  " + NemDeger[0] + "%";
+                    veriGonder(record, SicaklikNem);
+
+                }
+
+
+                minutes = 0;
+                hours = 0;
+                second = 0;
+            }
+                //Cihaz Açıksa
+            else if (cihaz == 1) {
+
+                $("#CihazBaglanti").text("Cihaz Açık");
+                $(".CihazDurumu").css("background-color", "#831B00");
+                $("#CihazBaglanti").css("font-size", "25px");
+                $("#CihazBaglanti").css("top", "10px");
+            }
+        }
+        degerAl();
+        window.setInterval(degerAl, 1000);
+
+
+        var bayrak;
+        //Sayaç
+        function sayac() {
+            //Jsondan veri al
+            function degerAl() {
+                $(document).ready(function () {
+                    $.getJSON(site3).done(function (veri) {
+                        window.kapali = veri[0].value;
+                        cihaz = veri[0].value;
+                    })
+                })
+            }
+            degerAl();
+            window.setInterval(degerAl, 1000);
+
+            //veritabanından gelen değer
+            minutes = @Model.status.minutes;
+            hours = @Model.status.hours;
+            second = @Model.status.seconds;
+            //Timer işlemleri
+            function update() {
+
+
+
+                if (cihaz == 1) {
+
+                 if (hours < 10 && minutes < 10)
+                    $("#time").text("0" + hours + "." + "0" + minutes + "." + second + " Dk")
+                else if (hours > 10 && minutes < 10)
+                    $("#time").text(hours + "." + "0" + minutes + "." + second + " Dk")
+                else if (hours < 10 && minutes > 10)
+                    $("#time").text("0" + hours + "." + minutes + "." + second + " Dk")
+                else
+                    $("#time").text(hours + "." + minutes + "." + second + " Dk")
+                }
+
+
+
+               if (cihaz == 0) {
+                    $("#time").text("");
+                    clearInterval(sayac);
+                    //Döngüyü durdur
+                }
+
+
+                second += 1;
+                if (second == 60) {
+                    minutes += 1;
+                    second = 0;
+                }
+                if (minutes === 60) {
+                    hours += 1;
+                    minutes = 0;
+                }
+
+                SayaciGonder(hours, minutes, second);
+
+
+
+
+            }
+            update();
+            setInterval(update, 1000);
+            bayrak = 1;
+
+            if (cihaz == 0) {
+                sayac();
+                setInterval(sayac, 1000);
+                bayrak = 0;
+
+            }
+
+
+
+        }
+        sayac();
+        // veritabanına bilgileri gönder
+        function veriGonder(CihazDurumu,SicaklikNem) {
+
+            $.ajax({
+
+                url: '/Home/DbKayit',
+                type: 'POST',
+                dataType: 'json',
+                data: { sure: CihazDurumu, sicaklikNem: SicaklikNem },
+                error: function (data) {
+                    alert('Oh no :(');
+                }
+            });
+        }
+
+        //Sayacı veritabanina gönder
+       function SayaciGonder(hours,minutes,seconds) {
+
+            $.ajax({
+
+                url: '/Home/SayacDb',
+                type: 'POST',
+                dataType: 'json',
+                data: { saat: hours, dakika : minutes , saniye: seconds},
+                error: function (data) {
+                    alert('Oh no :(');
+                }
+            });
+        }
+
+    </script>
+
+
+    <!--tablo Script-->
+
+    <script>
+        //Tabloları butona göre gösterip saklama
+        $("#yillik").hide();
+        $("#aylik").hide();
+        $("#haftalik").hide();
+
+        $(document).ready(function () {
+
+            $("#gunlukB").click(function () {
+
+                $("#yillik").hide();
+                $("#aylik").hide();
+                $("#haftalik").hide();
+                $("#gunluk").show();
+
+
+            });
+        });
+
+        $(document).ready(function () {
+
+            $("#haftalikB").click(function () {
+
+                $("#yillik").hide();
+                $("#aylik").hide();
+                $("#gunluk").hide();
+                $("#haftalik").show();
+            });
+        });
+
+        $(document).ready(function () {
+
+            $("#aylikB").click(function () {
+
+                $("#yillik").hide();
+                $("#haftalik").hide();
+                $("#gunluk").hide();
+                $("#aylik").show();
+            });
+        });
+
+        $(document).ready(function () {
+
+            $("#yillikB").click(function () {
+                $("#aylik").hide();
+                $("#haftalik").hide();
+                $("#gunluk").hide();
+                $("#yillik").show();
+            });
+        });
+
+
+
+
+    </script>
+
+    <!-- ScrollBar Script for table-->
+    <script>
+
+        var myCustomScrollbar = document.querySelector('.my-custom-scrollbar');
+        //  var ps = new PerfectScrollbar(myCustomScrollbar);
+
+        var scrollbarY = myCustomScrollbar.querySelector('.ps.ps--active-y>.ps__scrollbar-y-rail');
+
+                  //  myCustomScrollbar.onscroll = function () {
+                   //     scrollbarY.style.cssText = `top: ${this.scrollTop}px!important; height: 400px; right: ${-this.scrollLeft}px`;
+                   // }
+
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+</body>
+</html>

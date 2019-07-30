@@ -1,0 +1,371 @@
+
+ul {
+    position: absolute;
+    right: 40px;
+    font-size: 20px;
+    top: 2%;
+}
+
+    .m {
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+    }
+
+    .baslik {
+        font-family: Georgia, serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        color: #000000;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: small-caps;
+        text-transform: none;
+    }
+
+    .resim {
+        position: absolute;
+        left: 47%;
+        top: 10px;
+        z-index: 1;
+        wIdth: 100px;
+    }
+
+    .arkaplan {
+        background-color: whitesmoke;
+        position: relative;
+        height: 600px;
+        margin: 1% 5% 5% 5%;
+        font-size: 62.5%;
+        padding: 5% 2% %2% 5%;
+    }
+
+    .info {
+        background-color: whitesmoke;
+        float: left;
+        top: 10%;
+        left: 3%;
+        text-align: center;
+        position: relative;
+        height: 60%;
+        wIdth: 28%;
+        position: center;
+        margin-right: 5%;
+    }
+
+    .danisman .baslik {
+        text-align:center;
+        font-size:30px;
+        position:relative;
+    }
+
+    .danisman .eposta {
+        font-size:20px;
+        text-align:center;
+        position:relative;
+    }
+
+    .danisman .tel {
+        font-size:20px;
+}
+
+    .stajyerler .baslik {
+         text-align: center;
+         font-size: 20px;
+         position: relative;
+     }
+
+     .stajyerler .eposta{
+          font-size: 14px;
+          text-align: center;
+          position: relative;
+          float:left;
+      }
+
+    .stajyerler .tel {
+        font-size: 14px;
+        float:left;
+    }
+
+        .fabb {
+            padding: 8px;
+            font-size: 15px;
+            wIdth: 32px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 5px;
+            position: relative;
+        }
+
+        .fab:hover {
+            opacity: 0.6;
+        }
+
+        .fa-facebook-f {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+    footer {
+        position: relative;
+        top: 100px;
+        background-color: dimgray;
+    }
+
+@media screen and (max-wIdth:1430px){
+
+    .stajyerler .baslik {
+        text-align: center;
+        font-size: 17px;
+        position: relative;
+    }
+
+    .stajyerler .eposta {
+        font-size: 14px;
+        text-align: center;
+        position: relative;
+        float: none;
+    }
+
+    .stajyerler .tel {
+        font-size: 14px;
+        float: none;
+    }
+}
+
+@media screen and (max-wIdth:1126px)
+{
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 18px;
+    }
+
+    .danisman .baslik{
+        font-size:20px;
+    }
+
+    .danisman .eposta {
+        font-size: 12px;
+        text-align: center;
+        position: relative;
+    }
+
+    .danisman .tel {
+        font-size: 12px;
+    }
+
+    .stajyerler .baslik {
+        text-align: center;
+        font-size: 15px;
+        position: relative;
+    }
+
+    .stajyerler .eposta {
+        font-size: 10px;
+        text-align: center;
+        position: relative;
+        float: none;
+    }
+
+    .stajyerler .tel {
+        font-size: 10px;
+        float: none;
+    }
+
+}
+
+@media screen and (max-wIdth:665px) {
+
+
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 12px;
+    }
+
+    .menu {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        background-color: whitesmoke;
+        wIdth: 100%;
+        text-align: center;
+    }
+
+    .info {
+        float: none;
+        left:0px;
+        wIdth:100%;
+    }
+
+    .arkaplan{
+        height:auto;
+    }
+
+    .danisman .baslik {
+        font-size: 30px;
+    }
+
+    .danisman .eposta {
+        font-size: 20px;
+    }
+
+    .danisman .tel {
+        font-size: 20px;
+    }
+
+    .stajyerler .baslik {
+        font-size: 25px;
+    }
+
+    .stajyerler .eposta {
+        font-size: 18px;
+    }
+
+    .stajyerler .tel {
+        font-size: 18px;
+    }
+
+    footer {
+        top: auto;
+    }
+}
+
+@media screen and (max-wIdth:360px) {
+
+
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 8px;
+    }
+
+    .menu {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        background-color: whitesmoke;
+        wIdth: 100%;
+        text-align: center;
+    }
+
+    .info {
+        float: none;
+        left: 0px;
+        wIdth: 100%;
+    }
+
+    .arkaplan {
+        height: auto;
+    }
+
+    .danisman .baslik {
+        font-size: 20px;
+    }
+
+    .danisman .eposta {
+        font-size: 15px;
+    }
+
+    .danisman .tel {
+        font-size: 15px;
+    }
+
+    .stajyerler .baslik {
+        font-size: 20px;
+    }
+
+    .stajyerler .eposta {
+        font-size: 14px;
+    }
+
+    .stajyerler .tel {
+        font-size: 14px;
+    }
+
+    footer {
+        top: auto;
+    }
+}
+
+@media screen and (max-wIdth:260px) {
+
+
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 5px;
+    }
+
+    .menu {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        background-color: whitesmoke;
+        wIdth: 100%;
+        text-align: center;
+    }
+
+    .info {
+        float: none;
+        left: 0px;
+        wIdth: 100%;
+    }
+
+    .arkaplan {
+        height: auto;
+    }
+
+    .danisman .baslik {
+        font-size: 15px;
+    }
+
+    .danisman .eposta {
+        font-size: 10px;
+    }
+
+    .danisman .tel {
+        font-size: 10px;
+    }
+
+    .stajyerler .baslik {
+        font-size: 15px;
+    }
+
+    .stajyerler .eposta {
+        font-size: 8px;
+    }
+
+    .stajyerler .tel {
+        font-size: 8px;
+    }
+
+    footer {
+        top: auto;
+    }
+}

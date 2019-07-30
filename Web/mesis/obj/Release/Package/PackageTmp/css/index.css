@@ -1,0 +1,684 @@
+        ul {
+            position: absolute;
+            right: 40px;
+            font-size: 20px;
+            top:2%;
+        }
+
+        .m {
+            padding: 10px 10px 10px 10px;
+            text-align: center;
+        }
+
+        .baslik {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            word-spacing: 2px;
+            color: #000000;
+            font-weight: normal;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: small-caps;
+            text-transform: none;
+        }
+
+        .my-custom-scrollbar {
+            position: relative;
+            width: 800px;
+            height: 330px;
+            overflow: auto;
+            left:230px;
+        }
+
+     
+        .resim {
+         position: absolute;
+         left: 47%;
+         right: 47%;
+         top: 10px;
+         z-index: 1;
+         width: 100px;
+         margin-left: auto;
+         margin-right: auto;
+         }
+
+        .slides {
+            background-color: slategrey;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fffdfd;
+            font-size: 30px;
+            text-align: center;
+            text-indent: 10px;
+            right: 5px;
+            position:relative;
+        }
+
+        .fabb {
+            padding: 8px;
+            font-size: 15px;
+            width: 32px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 5px;
+            position: relative;
+          
+        }
+
+        .fab:hover {
+            opacity: 0.6;
+        }
+
+        .fa-facebook-f {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .Cihaz {
+            float: left;
+            position: absolute;
+            left: 13%;
+        }
+
+        .durum {
+            font-size: 150%;
+            
+        }
+
+        .buttons {
+            right: 300px;
+            float: left;
+            position: absolute;
+            font-size: initial;
+        }
+
+        .CihazDurumu {
+            background-color: #6286a0;
+            border: 15px solid rgba(255, 255, 255, .5);
+            border-radius: 150px;
+            width: 300px;
+            height: 300px;
+            line-height: 200px;
+            font-size: 20px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-shadow: #2d4251  5px 5px 5px;
+            text-align: center;
+            left: 10%;
+            position: relative;
+            display: table;
+            float: left;
+            top: 20px;
+        }
+
+
+
+        .table {
+            top: 20px;
+            margin: auto;
+            width: 700px;
+            position: relative;
+            left:5%;
+            
+        }
+
+        .barMenu1 {
+            font-size: 25px;
+            position: relative;
+            left: 15%;
+        }
+
+        .barMenu2 {
+            font-size: 25px;
+            position: relative;
+            left: 60%;
+        }
+
+
+        .istatistik {
+            width: 650px;
+            float: left;
+            top: 30px;
+            position: relative;
+        }
+
+        .istatistikDiv {
+          top:30px;
+          height:250px;
+          width:100%;
+          position:relative;
+        }
+
+        #myfirstchart {
+            height: 250px;
+            left: 2%;
+            right: 50px;
+        }
+
+        #mysecondchart{
+           left:100px;
+            
+        }
+
+        footer {
+            position: relative;
+            top: 100px;
+            background-color: dimgray;
+        }
+
+
+@media screen and (max-width:1400px)
+{
+
+    .buttons {
+        right: 300px;
+        float: left;
+        position: absolute;
+        font-size: initial;
+    }
+
+    .istatistik {
+        width: 450px;
+        float: left;
+        top: 30px;
+        position: relative;
+    }
+
+    .istatistikDiv {
+        top: 30px;
+        height: 300px;
+        width: 100%;
+        position: relative;
+    }
+
+    #myfirstchart {
+        height: 250px;
+        left: 2%;
+
+    }
+
+    svg {
+        width: 450px;
+    }
+
+    .my-custom-scrollbar {
+        left: 3%;
+    }
+
+    .CihazDurumu {
+        left: 7%;
+
+    }
+   
+}
+
+@media screen and (max-width:1137px) {
+
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 17px;
+    }
+
+    .slides {
+        font-size: 20px;
+    }
+
+    .buttons {
+        right: 10%;
+    }
+
+
+    .Cihaz {
+        left: 12%;
+        font-size:15px;
+    }
+
+    .btn {
+        padding: 3px 3px 2px 2px;
+    }
+
+    .CihazDurumu {
+        left: 5%;
+        height: 300px;
+        width: 300px;
+    }
+
+    #gunluk {
+        right: 0px;
+    }
+
+    .table {
+        width: 500px;
+        height: 300px;
+        top: 25px;
+        left: 5%;
+        right:1%;
+    }
+
+    .my-custom-scrollbar {
+        position: relative;
+        width: 570px;
+        height: 350px;
+        overflow: auto;
+        left: 15%;
+    }
+
+
+
+}
+
+@media screen and (max-width:1013px) {
+    .istatistik {
+        width: 500px;
+        float: left;
+        top: 30px;
+        position: relative;
+    }
+
+    .istatistikDiv {
+        top: 30px;
+        height: 300px;
+        width: 100%;
+        position: relative;
+    }
+
+    #myfirstchart {
+        height: 250px;
+        left: 15%;
+        float:none;
+    }
+    #mysecondchart {
+        float: none;
+        left: 15%;
+    }
+
+    svg {
+        width: 500px;
+    }
+
+    footer{
+        top:400px;
+    }
+
+    .my-custom-scrollbar {
+        left: 0%;
+    }
+}
+
+@media screen and (max-width:806px)
+{
+    .CihazDurumu {
+        float: none;
+        left: 30%;
+
+
+    }
+
+    .table
+    {
+        
+        top:40px;
+        float:none;
+        left:0%;
+    }
+
+    .my-custom-scrollbar {
+        top:40px;
+        position: relative;
+        width: 700px;
+        overflow: auto;
+        left: 0%;
+    }
+
+
+
+    .buttons
+    {
+        right:5%;
+    }
+
+    .Cihaz
+    {
+        left:5%;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+
+    .resim {
+        display: none;
+    }
+
+    .baslik
+    {
+        font-size:12px;
+    }
+
+    .menu {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        background-color:whitesmoke;
+        width:100%;
+        text-align:center;
+    }
+
+    .carousel-inner {
+        z-index: -1;
+    }
+
+    .navbar {
+        z-index: 10;
+    }
+    .Cihaz
+    {
+        left:1%;
+    }
+    .durum
+    {
+        font-size:100%;
+    }
+
+    .buttons {
+        right: 0px;
+    }
+
+    button .btn {
+        padding: 2px 2px 1px 1px;
+    }
+
+    .buttons button{
+        font-size:70%;
+    }
+
+    .kayit
+    {
+        font-size:40%;
+        margin-right:0px;
+        margin-left:0px;
+    }
+
+    .CihazDurumu
+    {
+        left:17%;
+        float:none;
+    }
+
+    .table
+    {
+        width:400px;
+        top:35px;
+        left:1%;
+        right:1%;
+    }
+
+    .istatistikDiv
+    {
+        height:600px;
+    }
+
+    .istatistik {
+        float: none;
+        height: 30px;
+        top: 30px;
+        width: 450px;
+    }
+
+    #myfirstchart {
+        left: 0px;
+        float: none;
+    }
+
+    #mysecondchart {
+        float: none;
+        left: 0px;
+    }
+   
+    svg
+    {
+        width:4500px;
+    }
+
+    footer
+    {
+        top:auto;
+    }
+
+    .my-custom-scrollbar {
+        top:35px;
+        position: relative;
+        width: 450px;
+        overflow: auto;
+        left: 1%;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 10px;
+    }
+
+    .menu {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        background-color: whitesmoke;
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel-inner {
+        z-index: -1;
+    }
+
+    .navbar {
+        z-index: 10;
+    }
+
+    .Cihaz {
+        left: 1%;
+    }
+
+    .durum {
+        font-size: 100%;
+    }
+
+    .buttons {
+        right: 0px;
+    }
+
+    button .btn {
+        padding: 1.5px 1.5px 0.5px 0.5px;
+    }
+
+    .buttons button {
+        font-size: 50%;
+    }
+
+    .kayit {
+        font-size: 40%;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .CihazDurumu {
+        left: 10%;
+        float: none;
+    }
+
+    .table {
+        width: 300px;
+        top: 35px;
+        left: 0.5%;
+        right: 0.5%;
+    }
+
+    .istatistikDiv {
+        height: 600px;
+    }
+
+    .istatistik {
+        float: none;
+        height: 30px;
+        top: 30px;
+        width: 350px;
+    }
+
+    #myfirstchart {
+        left: 0px;
+        float: none;
+    }
+
+    #mysecondchart {
+        float: none;
+        left: 0px;
+    }
+
+    svg {
+        width: 4500px;
+    }
+
+    footer {
+        top: auto;
+    }
+
+    .my-custom-scrollbar {
+        top: 35px;
+        position: relative;
+        width: 355px;
+        overflow: auto;
+        left: 0.5%;
+    }
+}
+
+@media screen and (max-width:365px) {
+
+
+    .resim {
+        display: none;
+    }
+
+    .baslik {
+        font-size: 7px;
+    }
+
+    .menu {
+        right: 0px;
+        position: absolute;
+        z-index: 1;
+        background-color: whitesmoke;
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel-inner {
+        z-index: -1;
+    }
+
+    .navbar {
+        z-index: 10;
+    }
+
+    .Cihaz {
+        left: 1%;
+    }
+
+    .durum {
+        font-size: 100%;
+    }
+
+    .buttons {
+        right: 0px;
+    }
+
+    button .btn {
+        padding: 1px 1px 0.25px 0.25px;
+    }
+
+    .buttons button {
+        font-size: 30%;
+    }
+
+    .kayit {
+        font-size: 40%;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .CihazDurumu {
+        left: 0%;
+        float: none;
+    }
+
+    .table {
+        width: 280px;
+        top: 35px;
+        left: 0.25%;
+        right: 0.25%;
+    }
+
+    .istatistikDiv {
+        height: 600px;
+    }
+
+    .istatistik {
+        float: none;
+        height: 30px;
+        top: 30px;
+        width: 280px;
+    }
+
+    #myfirstchart {
+        left: 0px;
+        float: none;
+    }
+
+    #mysecondchart {
+        float: none;
+        left: 0px;
+    }
+
+    svg {
+        width: 4500px;
+    }
+
+    footer {
+        top: auto;
+    }
+
+    .my-custom-scrollbar {
+        top: 35px;
+        position: relative;
+        width: 285px;
+        overflow: auto;
+        left: 0.25%;
+    }
+}
+
